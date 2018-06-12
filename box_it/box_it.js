@@ -29,11 +29,10 @@ function drawBarsAround(string) {
     return `|${string}|`;
 }
 
+
 function boxIt(array) {
     let string = "";
-    let lastIndex = array.length -1;
-    let number = array[0].length;
-    let name="";
+    let number = 0;
 
     for(name of array) {
         if(number < name.length) {
@@ -41,22 +40,29 @@ function boxIt(array) {
         }
     }
 
-    for(name of array){
-        if(name === array[0]){
-            name = name + " ".repeat(number - name.length);
-            string = drawTopBorder(number)+ "\n" + drawBarsAround(name) +"\n";
-        }
-        else if(name === array[lastIndex]){
-            name = name + " ".repeat(number - name.length);
-            string += drawMiddleBorder(number)+ "\n" + drawBarsAround(name) +"\n" + drawBottomBorder(number);
-        }else {
-            name = name + " ".repeat(number - name.length);
-            string += drawMiddleBorder(number)+ "\n" + drawBarsAround(name) +"\n";
-        }
+    string += drawTopBorder(number) +"\n";
+    
+    for(let i =0; i < array.length; i++){  
+
+        let name = array[i];
+
+        name = name + " ".repeat(number - name.length);
+
+        string +=  drawBarsAround(name) +"\n"; 
+
+        if(i !== array.length -1){
+        
+            string += drawMiddleBorder(number)+ "\n";   
     }
+    
+    }
+    string += drawBottomBorder(number);
     return string;
 }
 
+
+
 console.log(boxIt(["Luciana Castro", "Julio Cunha", "Gustavo Cunha", "Luciana Castro Silva"]));
 
+console.log(boxIt([]));
 
