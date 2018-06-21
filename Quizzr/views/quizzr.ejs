@@ -1,6 +1,51 @@
 
- <%- include("./partials/header") %>
+<%- include("./partials/header") %>
 
-    <h1> Welcome! <%= username %></h1>     
+    <div class="title">
+        <h1> Welcome! <%= username %></h1>
+    </div>
+         
+    <p> Test your JavaScript knowledge</p>
+
+    <div>
+        <form method ="POST" action="/quizzr">
+            <p>1. Inside which HTML element do we put the JavaScript?</p>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="question1" id="answer1_1" value="option1">
+                <label class="form-check-label" for="answer1_1">
+                    &lt;javascript&gt;
+                </label>
+            </div>
+
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="question1" id="answer1_2" value="option2">
+                <label class="form-check-label" for="answer1_2">
+                    &lt;js&gt;
+                </label>
+            </div>
+
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="question1" id="answer1_3" value="option3">
+                <label class="form-check-label" for="answer1_3">
+                    &lt;scripting&gt;
+                </label>            
+            </div>
+
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="question1" id="answer1_4" value="option4">
+                <label class="form-check-label" for="answer1_4">
+                    &lt;script&gt;
+                </label>            
+            </div> 
+            <input type="submit"  class ="btn btn-primary" name="button" value="submit">
+            </form>    
+    </div>
+    
+    
+
+    </div>
+    
+  
+
   
 <%- include("./partials/footer") %>
