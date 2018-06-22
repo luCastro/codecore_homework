@@ -19,18 +19,6 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-
-app.use((req, res, next) => {
-
-  const username = req.cookies.username;
-  res.locals.username = "";
-
-  if (username) {
-    res.locals.username = username;
-  }
-  next();
-});
-
 app.use('/', indexRouter);
 app.use('/quizzr', quizzrRouter);
 

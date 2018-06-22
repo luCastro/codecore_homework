@@ -4,7 +4,7 @@ const router = express.Router();
 
 
 router.get('/', function(req, res, next) {
-    res.render('quizzr');
+    res.render('quizzr', {username: req.cookies.username});
   });
 
 
