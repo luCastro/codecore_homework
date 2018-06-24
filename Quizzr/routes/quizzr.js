@@ -12,7 +12,7 @@ const COOKIE_MAX_AGE = 1000 * 60 * 60 * 24;
 router.post('/', (req, res)=> {
 
   const question1 = req.body.question1; 
-  
+  // res.json(req.body);
   let result;
    if(question1 === "option4"){
       result = "It is correct";
