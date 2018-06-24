@@ -2,21 +2,48 @@
  <%- include("./partials/header") %>
  
 
- <form method="POST" action="/form" class="use-form" >
-    <div class="form-group row">
+        <div class="row img-row">
+          
+          <div class="col-sm-12 img-col">
+            <img src="/images/marvel.png" alt="all-marvel-superheros" class="img-fluid img-responsive">
+            <p class="welcome-font text-secondary">Welcome to SUPERHEROES Quizzr!!</p>
+            
+            <form method="POST" action="/form" class="form-group" >
+            <div class="row img-row form-row">
+  
+              <div class="col">
+                <p for="username :" class="label font-weight-bold text-right">Username:</p>
+              </div>
+  
+              <div class="col">
+                <input type="text" class="form-control" id="username" name="username">
+              </div>
+  
+              <div class="col">
+                <input class="btn btn-danger btn-md " type="submit" name="submit" value="submit">        
+              </div>  
+            </div>
+          </form>
+            
+          </div>
+
+        </div>
+          
+        
+               
+  
+
+
+
+
+   
+        
+        
+        
       
-    <div class="col-sm-2">
-        <label for="username :" class="label font-weight-bold">Username:</label>
+      
+      
+      
       </div>
-
-      <div class="col-sm-6 ">
-        <input type="text" class="form-control" id="username" name="username">
-      </div>
-
-      <div class="col-sm-4">
-      <input class="btn btn-primary btn-md " type="submit" name="submit" value="submit">        
-      </div>
-    </div>
- </form>
-
+      
  <%- include("./partials/footer") %>

@@ -1,7 +1,37 @@
 
+
+
 body {
-    background-color: lavender;
+     overflow-y: auto;    
+     background: url('/images/background.png'),
+                 linear-gradient(50deg,#8fa0ff,#3836c3);                
+     background-attachment: fixed;
+    /* background-color: aqua; */
     font-size: 1.2rem;
+    height: 100vh;
+}
+
+.container {
+    background-color: white;
+    /* border: 1px solid red; */
+    /* height: 100vh; */
+    /* margin: 0 110px 0 110px; */
+    
+}
+
+.img-row {
+    
+    padding-top: 80px;
+    background-color: white;
+    /* border: 1px solid red;    */
+}
+
+
+.img-col {
+    
+    padding: 0;
+    /* border: 1px solid red; */
+    text-align: center;
 }
 
 
@@ -9,10 +39,28 @@ body {
     font-size: 35px;
 } */
 
-.use-form {
-    margin-top: 100px;
+
+img {
+    width: 55vw;
+    padding: 0;   
+    margin: 0;
+    /* border: 1px solid red;  */
 }
 
+
 .title {
-    margin-top: 25px;
+    padding-top: 50px;
+    padding-bottom: 25px;
+    margin-top: 60px;
+}
+
+.welcome-font {
+    font-family: 'Bangers', cursive;
+    font-size: 2em;
+    
+}
+
+.form-row {
+    padding: 25px 15px 0 15px; 
+    margin: 0;
 }
