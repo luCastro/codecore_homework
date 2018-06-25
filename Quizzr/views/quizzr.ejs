@@ -5,46 +5,328 @@
         <h1> Welcome! <%= username %></h1>
     </div>
          
-    <p> Test your Marvel's Superheroes knowledge</p>
+        <p> Test your Marvel's Superheroes knowledge</p>
 
-    <div>
-        <form method ="POST" action="/quizzr">
-            <div>    
-                <p>1. Peter Parker works as a photographer for:</p>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="question1" id="answer1_1" value="option1">
-                    <label class="form-check-label" for="answer1_1">
-                        The Daily Planet
-                    </label>
+        <div>
+            <form method ="POST" action="/quizzr">
+                <div>    
+                    <p>1. Peter Parker works as a photographer for:</p>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="question1" id="answer1_1" value="option1">
+                        <label class="form-check-label" for="answer1_1">
+                            The Daily Planet
+                        </label>
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="question1" id="answer1_2" value="option2">
+                        <label class="form-check-label" for="answer1_2">
+                            The Daily Bugle
+                        </label>
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="question1" id="answer1_3" value="option3">
+                        <label class="form-check-label" for="answer1_3">
+                            The New York Times
+                        </label>            
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="question1" id="answer1_4" value="option4">
+                        <label class="form-check-label" for="answer1_4">
+                            The Sun
+                        </label>            
+                    </div>      
+                </div> 
+
+                <div>    
+                    <p>2. S.H.I.E.L.D.'s highest ranking agent is:</p>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="question2" id="answer2_1" value="option1">
+                        <label class="form-check-label" for="answer2_1">
+                            Nick Fury
+                        </label>
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="question2" id="answer2_2" value="option2">
+                        <label class="form-check-label" for="answer2_2">
+                            Stevens Rogers
+                        </label>
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="question2" id="answer2_3" value="option3">
+                        <label class="form-check-label" for="answer2_3">
+                            Peter Parker
+                        </label>            
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="question2" id="answer2_4" value="option4">
+                        <label class="form-check-label" for="answer2_4">
+                            Natalia Romanova
+                        </label>            
+                    </div> 
                 </div>
 
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="question1" id="answer1_2" value="option2">
-                    <label class="form-check-label" for="answer1_2">
-                        The Daily Bugle
-                    </label>
+                <div>    
+                    <p>3. Captain America was frozen in which war? </p>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="question3" id="answer3_1" value="option1">
+                        <label class="form-check-label" for="answer3_1">
+                            World War I
+                        </label>
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="question3" id="answer3_2" value="option2">
+                        <label class="form-check-label" for="answer3_2">
+                            World War II
+                        </label>
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="question3" id="answer3_3" value="option3">
+                        <label class="form-check-label" for="answer3_3">
+                            American Civil War
+                        </label>            
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="question3" id="answer3_4" value="option4">
+                        <label class="form-check-label" for="answer3_4">
+                            Cold War
+                        </label>            
+                    </div> 
                 </div>
 
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="question1" id="answer1_3" value="option3">
-                    <label class="form-check-label" for="answer1_3">
-                        The New York Times
-                    </label>            
+                <div>    
+                    <p>4. What is commonly believe to be The Black Widow's previous occupation before
+                    becoming a Russian spy? </p>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="question4" id="answer4_1" value="option1">
+                        <label class="form-check-label" for="answer4_1">
+                            A ballerina
+                        </label>
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="question4" id="answer4_2" value="option2">
+                        <label class="form-check-label" for="answer4_2">
+                            A military pilot
+                        </label>
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="question4" id="answer4_3" value="option3">
+                        <label class="form-check-label" for="answer4_3">
+                            A thief
+                        </label>   
+                    </div>         
+                
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="question4" id="answer4_4" value="option4">
+                        <label class="form-check-label" for="answer4_4">
+                            An athlete
+                        </label>            
+                    </div> 
                 </div>
 
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="question1" id="answer1_4" value="option4">
-                    <label class="form-check-label" for="answer1_4">
-                        The Sun
-                    </label>            
-                </div>      
-            </div> 
+                <div>    
+                    <p>5. What vehicle is the Avengers primary mode of transport? </p>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="question5" id="answer5_1" value="option1">
+                        <label class="form-check-label" for="answer5_1">
+                            A bus
+                        </label>
+                    </div>
 
-     
-            <input type="submit"  class ="btn btn-primary" name="button" value="submit">      
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="question5" id="answer5_2" value="option2">
+                        <label class="form-check-label" for="answer5_2">
+                            The Quinjet
+                        </label>
+                    </div>
 
-        </form>        
-    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="question5" id="answer5_3" value="option3">
+                        <label class="form-check-label" for="answer5_3">
+                            The Blackbird
+                        </label>            
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="question5" id="answer5_4" value="option4">
+                        <label class="form-check-label" for="answer5_4">
+                            The Blackhawk
+                        </label>            
+                    </div> 
+                </div>
+            
+                <div>    
+                    <p>6. What is the name of Tony Stark's building that the team uses as head-quarters in Marvel: 
+                    Ultimate Alliance? </p>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="question6" id="answer6_1" value="option1">
+                        <label class="form-check-label" for="answer6_1">
+                            Camp Hammod
+                        </label>
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="question6" id="answer6_2" value="option2">
+                        <label class="form-check-label" for="answer6_2">
+                            Iron Tower
+                        </label>
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="question6" id="answer6_3" value="option3">
+                        <label class="form-check-label" for="answer6_3">
+                            Stark Tower
+                        </label>            
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="question6" id="answer6_4" value="option4">
+                        <label class="form-check-label" for="answer6_4">
+                            S.H.I.E.L.D. Headquaters
+                        </label>            
+                    </div> 
+                </div>
+
+                <div>    
+                    <p>7. Which Superheroes is from Canada? </p>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="question7" id="answer7_1" value="option1">
+                        <label class="form-check-label" for="answer7_1">
+                            Iceman
+                        </label>
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="question7" id="answer7_2" value="option2">
+                        <label class="form-check-label" for="answer7_2">
+                            Cyclope
+                        </label>
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="question7" id="answer7_3" value="option3">
+                        <label class="form-check-label" for="answer7_3">
+                            Wolverine
+                        </label>            
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="question7" id="answer7_4" value="option4">
+                        <label class="form-check-label" for="answer7_4">
+                            Sasquatch
+                        </label>            
+                    </div> 
+                </div>
+
+                <div>    
+                    <p>8. Which one of these superheroes belongs Avengers original formation? </p>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="question8" id="answer8_1" value="option1">
+                        <label class="form-check-label" for="answer8_1">
+                            Captain America
+                        </label>
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="question8" id="answer8_2" value="option2">
+                        <label class="form-check-label" for="answer8_2">
+                            Thor
+                        </label>
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="question8" id="answer8_3" value="option3">
+                        <label class="form-check-label" for="answer8_3">
+                        Black Widow
+                        </label>            
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="question8" id="answer8_4" value="option4">
+                        <label class="form-check-label" for="answer8_4">
+                            Ant-man 
+                        </label>            
+                    </div> 
+                </div>
+
+                <div>    
+                    <p>9.Which one of these names is a infinity stones? </p>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="question9" id="answer9_1" value="option1">
+                        <label class="form-check-label" for="answer9_1">
+                            The Mind stone
+                        </label>
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="question9" id="answer9_2" value="option2">
+                        <label class="form-check-label" for="answer9_2">
+                            The Corage stone
+                        </label>
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="question9" id="answer9_3" value="option3">
+                        <label class="form-check-label" for="answer9_3">
+                        The Soul stone
+                        </label>            
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="question9" id="answer9_4" value="option4">
+                        <label class="form-check-label" for="answer9_4">
+                            The Avengers stone
+                        </label>            
+                    </div> 
+                </div>
+
+
+                <div>    
+                    <p>10. Which one of these Marvel's curiosity is right? </p>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="question10" id="answer10_1" value="option1">
+                        <label class="form-check-label" for="answer10_1">
+                            The spider who bit spiderman had the body painted by hand.
+                        </label>
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="question10" id="answer10_2" value="option2">
+                        <label class="form-check-label" for="answer10_2">
+                            Venon, the spider-man villain, costed only $220,00 for Marvel.
+                        </label>
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="question10" id="answer10_3" value="option3">
+                        <label class="form-check-label" for="answer10_3">
+                            Marvel used the image of Samuel L Jackson for Nick Fury without the permission of the actor.
+                        </label>            
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="question10" id="answer10_4" value="option4">
+                        <label class="form-check-label" for="answer10_4">
+                            Stan Lee already worked from DC Comics.
+                        </label>            
+                    </div> 
+                </div>
+
+                <input type="submit"  class ="btn btn-primary" name="button" value="submit">      
+
+            </form>        
+        </div>
     
     </div>
     

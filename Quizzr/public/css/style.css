@@ -14,7 +14,7 @@ body {
 .container {
     background-color: white;
     /* border: 1px solid red; */
-     height: 100vh; */
+     height: auto;
     /* margin: 0 110px 0 110px; */
     
 }
@@ -57,10 +57,11 @@ img {
 .welcome-font {
     font-family: 'Bangers', cursive;
     font-size: 2em;
+    margin-bottom: 0;
     
 }
 
 .form-row {
-    padding: 25px 15px 0 15px; 
+    padding: 25px 15px 20px 15px; 
     margin: 0;
 }
