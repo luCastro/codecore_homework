@@ -8,9 +8,6 @@ exports.up = function(knex, Promise) {
         table.text('members');
         table.timestamp('createdAt').default(knex.fn.now());
     });
-    
-
-
 };
 
 exports.down = function(knex, Promise) {

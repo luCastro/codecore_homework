@@ -1,0 +1,15 @@
+<%- include("./partials/header")%>
+
+
+    <%for(let i; i<cohort.length; i++){%>
+        <div class="card">
+            <h5 class="card-header"><%=cohort[i].name%></h5>
+            <div class="card-body">
+            <p class="card-text"><%=cohort[i].members%></p>
+            </div>
+        </div>
+    <%}%>
+
+<%- include("./partials/footer")%>
+
+

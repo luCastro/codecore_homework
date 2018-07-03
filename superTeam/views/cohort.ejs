@@ -1,25 +1,47 @@
 <%- include("./partials/header")%>
-   
 
-    <div class="mt-5">
-        <form>
-          <div class="form-group">
-            <label for="imgUrl">Image URL:</label>
-            <input type="text" class="form-control" id="imgUrl" name="imgUrl" placeholder="img url">
-          </div>
-          <div class="form-group">
-            <label for="name">Name:</label>
-            <input type="text" class="form-control" id="name" name="name" placeholder="Team Name">
-          </div>
-          <div class="form-group">
-            <label for="members">Members</label>
-            <input type="password" class="form-control" id="members" name="members" placeholder="ex: Erika, Juliana, Elise, Luciana,...">
-          </div>
-
-          <button type="submit" class="btn btn-secondary">Submit</button>
-      </form>
-    </div>
-    
+    <div class="card mt-5">
+        <div class="card-header">
+            <h3><%=cohort.name%></h3>
+        </div>
+        <div class="card-header">
+            <p class="card-text"><%=cohort.members%></p>
+        </div>
+        <div>
+            <div class="card-body">
+                <form class="form-control" method = "GET" action='/cohort/<%= cohort.id%>'>
+                    <div>
+                        <label for="method">Method</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="method" id="teamCount" value="teamCount" checked>
+                            <label class="form-check-label" for="teamCount">
+                            Team Count
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="method" id="numberPerTeam" value="numberPerTeam">
+                            <label class="form-check-label" for="numberPerTeam">
+                            Number per team
+                            </label>
+                        </div>
+                        <label class="form-input-label" for="quantity">Quantity</label>
+                        <div>
+                            <input class="form-control mb-3" type="text" name="quantity" id="quantity">                      
+                        </div> 
+                        <input type="submit" class="btn btn-secondary btn-lg btn-block" name="submitCohort" value="Assign Teams">
+                    </div> 
+                </form>                
+            </div>
+                <% if (quantity) { %>
+                    <h3 class="ml-3 mr-3 font-weight-bold"> # Members</h3>
+                    <hr>
+                    <% for (let i = 0; i <  team.length; i++) {%>
+                        <p><span class="number ml-3 mr-3 font-weight-bold"><%= i+1 %></span><%= team[i].join(', ') %></p>
+                    <hr>
+                    <% } %>
+                <% } %>
+            </div>
+        </div>
 
 <%- include("./partials/footer")%>
 
