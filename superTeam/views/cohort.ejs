@@ -26,7 +26,10 @@
                         </div>
                         <label class="form-input-label" for="quantity">Quantity</label>
                         <div>
-                            <input class="form-control mb-3" type="text" name="quantity" id="quantity">                      
+                            <input class="form-control mb-3" type="text" name="quantity" value="" id="quantity">
+                            <% if (quantity) { %>
+                             value="<%quantity%>" 
+                             <% } %>                 
                         </div> 
                         <input type="submit" class="btn btn-secondary btn-lg btn-block" name="submitCohort" value="Assign Teams">
                     </div> 
