@@ -1,0 +1,29 @@
+     
+    <div class="row test">
+        <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <h2><%= @post.title %></h2>
+                <p><%= @post.body %></p>
+                <div>
+                    <small>
+                    Posted <%= time_ago_in_words(@post.created_at) %> ago
+                    </small>
+                    
+                    <small>
+                    Last edited <%= time_ago_in_words(@post.updated_at) %> ago  
+                    </small>
+                    <div class="mt-2">
+                        <span>
+                        <%= link_to "Edit post", edit_post_path(@post), class: "btn btn-primary"%>
+                        </span>
+                        <span>
+                        <%= link_to("Delete", post_path(@post),
+                        method: :delete,
+                        data: {
+                        confirm: "Are you sure?"}, class: "btn btn-primary")%>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        <div class="col-md-2"></div>
+    </div>

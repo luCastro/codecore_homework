@@ -10,6 +10,26 @@
   </head>
 
   <body>
+    <nav class="navbar fixed-top navbar-reverse navbar-expand-sm navbar-dark bg-dark mb-8">
+      <a class="navbar-brand text-info" href="/">Blog On Rails</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+       aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse topnav justify-content-end" id="navbarNavAltMarkup">
+        <div class="">
+          <ul class="nav navbar-nav navbar-right">
+              <li class="nav-item"><a class=" nav-link text-info"<%= link_to 'Home', posts_path%></a></li> 
+              <li class="nav-item"><a class=" nav-link text-info"<%= link_to 'New Post', new_post_path %></a></li>
+          </ul> 
+        </div>    
+      </div>
+    </nav>
+     
+    <div class = container-fluid>
+    
     <%= yield %>
+    
+    </div>
   </body>
 </html>

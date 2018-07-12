@@ -1,0 +1,29 @@
+
+
+<div class= "row mt-5 form-control">
+    <div class="col-md-12">
+    
+        <%= form_for(@post) do |p| %>
+        
+        <% if @post.errors.present? %>
+            <p>
+            <%= @post.errors.full_messages.join(', ') %>
+            </p>
+        <% end %>
+
+        <div class="form-group">
+            <%= p.label(:title)%>
+            <input class="form-control" <%= p.text_field(:title)%></input>
+        </div>
+        
+        <div class="form-group">
+            <%= p.label(:body)%>
+            <textarea class="form-control" rows="3"
+            <%= p.text_area(:body)%>
+            </textarea>        
+        </div>
+   
+        <%= p.submit%>
+        <% end %>
+    <div>
+<div>

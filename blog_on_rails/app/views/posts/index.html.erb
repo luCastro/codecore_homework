@@ -1,0 +1,42 @@
+<h1>All Posts</h1>
+  <div class="row">
+  <% @posts.each do |post| %>
+      <div class= "col-sm-4 mt-5 mb-5" >
+        <div class= "card w-100 h-100">
+            <div class= "card-body">
+              <h2><%= post.title %></h2>
+              <p><%= post.body %></p>
+
+            <div>
+              <small>
+                Posted <%= time_ago_in_words(post.created_at) %> ago
+              </small>
+              •
+              <small>
+                Last edited <%= time_ago_in_words(post.updated_at) %> ago
+              </small>
+              •
+            </div>
+            <div>
+                <small>
+                  <%= link_to "Edit", edit_post_path(post) %>
+                </small>
+
+                <small>
+                  <%= link_to(
+                    "Delete",
+                    post_path(post),
+                    method: :delete,
+                    data: {
+                      confirm: "Are you sure?"
+                    }
+                  )%>
+                </small>
+            </div>
+          </div>
+        </div>
+      </div>
+  <% end %>
+  </div>
+
+
