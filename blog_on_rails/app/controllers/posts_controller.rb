@@ -15,6 +15,9 @@ class PostsController < ApplicationController
 
     def show
         find_post
+        @comment = Comment.new
+        @comments = find_post.comments.order(created_at: :desc)
+
     end
 
     def destroy
