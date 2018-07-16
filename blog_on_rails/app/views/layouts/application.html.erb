@@ -5,7 +5,7 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= stylesheet_link_tag 'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
   </head>
 
@@ -20,7 +20,18 @@
         <div class="">
           <ul class="nav navbar-nav navbar-right">
               <li class="nav-item"><a class=" nav-link text-info"<%= link_to 'Home', posts_path%></a></li> 
-              <li class="nav-item"><a class=" nav-link text-info"<%= link_to 'New Post', new_post_path %></a></li>
+              <% if user_signed_in? %>
+                <li class="nav-item"><a class=" nav-link text-info"<%= link_to 'New Post', new_post_path %></a></li>
+              <% end %>
+
+              <% if current_user.present? %>
+                <span>Hi, <%= current_user.first_name %></span>
+                <li class="nav-item"><a class=" nav-link text-info"<%= link_to('Sign Out', session_path, 
+                method: :delete)%></a></li>
+              <%else%> 
+                <li class="nav-item"><a class=" nav-link text-info"<%= link_to('Sign In', new_session_path)%></a></li> 
+                <li class="nav-item"><a class=" nav-link text-info"<%= link_to('Sign Up', new_user_path)%></a></li>
+              <%end%> 
           </ul> 
         </div>    
       </div>

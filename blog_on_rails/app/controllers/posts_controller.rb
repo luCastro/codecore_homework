@@ -1,4 +1,8 @@
 class PostsController < ApplicationController
+    
+    before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
+    before_action :find_post, only: [:show, :edit, :update, :destroy]
+    before_action :authorize_user!, only: [:edit, :update, :destroy]
 
     def new
         @post = Post.new
@@ -6,6 +10,8 @@ class PostsController < ApplicationController
 
     def create
         @post = Post.new post_params
+        @post.user = current_user
+
         if @post.save
             redirect_to post_path(@post.id)
         else
@@ -49,5 +55,13 @@ class PostsController < ApplicationController
     def find_post
         @post = Post.find params[:id]
     end
+
+    def authorize_user!
+        unless can?(:crud, @post)
+          flash[:danger] = "Access Denied"
+          redirect_to post_path(@post)
+        end
+    end
+
 end
 

@@ -1,5 +1,7 @@
 class Post < ApplicationRecord
     has_many :comments, dependent: :destroy
+    
+    belongs_to :user
 #Validates
 #title must be unique
 #body must be present and contain at least 50 characters
@@ -12,6 +14,7 @@ class Post < ApplicationRecord
             minimum: 50, 
             maximum: 2048
         }
+
     )
 
     before_validation :set_default_title
